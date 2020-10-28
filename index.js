@@ -24,13 +24,22 @@ class Game {
             return 'computer wins'
         }
     }
-    move () {
+}
+
+class ComputerMove {
+    constructor(computer = null) {
+        this.computer = computer
+
+    }
+   get compMove () {
         let moves = ['rock', 'paper', 'sc']
         
         return this.computer = moves[Math.floor(Math.random() * 3)]
         }
 }
 
-let game1 = new Game('rock')
-game1.move()
-console.log(game1.turn())
+
+let comp = new ComputerMove
+console.log(comp.compMove)
+let game2 = new Game('sc', comp.compMove)
+console.log(game2.turn())
